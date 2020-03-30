@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import json
 
 with open('account_mapping.json') as file_object:
