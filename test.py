@@ -1,16 +1,22 @@
 #!/usr/bin/env python
 
 import json
+import re
+import csv
 
 with open('account_mapping.json') as file_object:
-        data = json.load(file_object)
-print(data)
+        json_data = json.load(file_object)
+print(json_data)
 
-vendor_name = "Joe Blow vendor"
+with open('transactions.csv') as file_object:
+        csv_reader = csv.reader(file_object, delimiter=',')
+        csv_data = for x in csv_reader:
+            x
 
-print data[vendor_name]
+for row in csv_data:
+    print row
 
-if data[vendor_name] != None:
-    print "Found " + str(data[vendor_name]) + "!"
-else:
-    print "vendor '" + vendor_name + "' not found"
+
+#result = re.search('CDN TIRE STORE STORE [0-9][0-9][0-9]', probably_matching_value)
+#
+#print result.group(0)
